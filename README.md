@@ -1,6 +1,6 @@
 # Claude Code: Slightly Dangerous
 
-A lot of users like to run with `--dangerously-skip-permissions`; that is insane -- unless you're sandboxing. This is an attempt for a simple fix that tries to create as frictionless of a workflow as possible, while preserving some degree of sanity. It'sa controlled alternative to Claude's in-built optional flag to bypass all permissions.
+A lot of users like to run with `--dangerously-skip-permissions`; that is insane -- unless you're sandboxing. This is an attempt for a simple fix that tries to create as frictionless of a workflow as possible, while preserving some degree of sanity. It's a controlled alternative to Claude's in-built optional flag to bypass all permissions.
 
 The basic idea is that all operations *within the project directory* are allowed; anything else requires approval.
 
