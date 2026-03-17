@@ -10,15 +10,9 @@ allowed-tools:
 
 Reset permissions to defaults. Follow these steps exactly.
 
-Step 1: Read the existing settings file.
+Step 1: Read the existing settings file using the `Read` tool on `.claude/settings.local.json`. If the file doesn't exist, print "No settings to reset." and stop.
 
-```bash
-cat .claude/settings.local.json 2>/dev/null || echo 'NOFILE'
-```
-
-Step 2: If the file doesn't exist (output was "NOFILE"), print "No settings to reset." and stop.
-
-If the file exists, parse the JSON and remove the `permissions` key entirely. Preserve all other keys.
+Step 2: Parse the JSON from step 1 and remove the `permissions` key entirely. Preserve all other keys.
 
 - If the resulting object is empty (`{}`), delete the file:
   ```bash

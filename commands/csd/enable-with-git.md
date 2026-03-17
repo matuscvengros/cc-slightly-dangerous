@@ -16,11 +16,7 @@ Step 1: Get the project directory.
 pwd
 ```
 
-Step 2: Read the existing settings file if it exists.
-
-```bash
-cat .claude/settings.local.json 2>/dev/null || echo '{}'
-```
+Step 2: Read the existing settings file if it exists. Use the `Read` tool on `.claude/settings.local.json`. If it doesn't exist, treat it as `{}`.
 
 Step 3: Now update `.claude/settings.local.json`. Parse the existing JSON from step 2. Replace ONLY the `permissions` key with the values below, preserving all other keys (hooks, plugins, etc.). Create the `.claude/` directory if needed.
 
